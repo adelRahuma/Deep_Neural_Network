@@ -1,12 +1,11 @@
 
-#####################################   Deep Nueral Network
+#####################################   Deep Nueral Network    ################################################
 
 # pip install tensorflow
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
 # tensorflow open source library for complex numerical computation
-
 # keras high level API Application Programming Interface for building and trainingg deep learning models
 #  functions keras
 mist = tf.keras.datasets.mnist # 70000 image size 28*28
@@ -17,14 +16,14 @@ mist = tf.keras.datasets.mnist # 70000 image size 28*28
 
 
 
-# fig, axes = plt.subplots(2,5, figsize=(15,6))
-#axes <-- 2D
+fig, axes = plt.subplots(2,5, figsize=(15,6))
+# axes <-- 2D
 # flatten converts axes into 1D [0,1,2,3,4,5,6,7,8,9]
-# for idx, axe in enumerate(axes.flatten()):
-#     axe.axis('off')
-#     axe.set_title(f'Label : {y_train[idx]}')
-#     axe.imshow(x_train[idx])
-# plt.show()
+for idx, axe in enumerate(axes.flatten()):
+    axe.axis('off')
+    axe.set_title(f'Label : {y_train[idx]}')
+    axe.imshow(x_train[idx])
+plt.show()
 
 #normalization by converting 0-255 to [0-1]
 x_train,x_test = x_train/255.0, x_test/255.0
